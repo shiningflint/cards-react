@@ -27,11 +27,13 @@ class MenuBtn extends React.Component {
 
   render() {
     return(
-      <button
-        className={"menu-btn"+(this.state.menu ? '' : ' menu-btn--show')}
-        onClick={this.props.toggleMenu}>
-        {this.props.name}
-      </button>
+      <div className="menu-btn-wrap">
+        <button
+          className={"menu-btn"+(this.state.menu ? '' : ' menu-btn--show')}
+          onClick={this.props.toggleMenu}>
+          {this.props.name}
+        </button>
+    </div>
     );
   }
 }

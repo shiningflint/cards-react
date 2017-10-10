@@ -8,7 +8,9 @@ class Header extends React.Component {
 
   render() {
     return(
-      <h1 className="header-title">ヘッダー</h1>
+      <div className="header-wrap">
+        <img src={require('../../assets/potato_logo.svg')} className="header-logo" />
+      </div>
     );
   }
 }
