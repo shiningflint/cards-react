@@ -1,37 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-const menuTimeout = 1500;
+const menuTimeout = 10;
 
 class MenuBtn extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      active: false,
+      menu: true,//initial state, componentDidMount will sync with props
     }
-    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
     setTimeout(() => {
       this.setState({
-        active: true
+        menu: this.props.menu,
       });
     }, menuTimeout);
-
   }
 
-  handleClick(e) {
+  componentWillReceiveProps(newProps) {
     this.setState({
-      active: false,
+      menu: newProps.menu,
     });
   }
 
   render() {
     return(
       <button
-        className={"menu-btn"+(this.state.active ? ' menu-btn--show' : '')}
-        onClick={this.handleClick}>
+        className={"menu-btn"+(this.state.menu ? '' : ' menu-btn--show')}
+        onClick={this.props.toggleMenu}>
         {this.props.name}
       </button>
     );

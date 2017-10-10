@@ -153,3 +153,33 @@ html {
 .menu-btn--show {
   transform: translate(50%, 0);
 }
+
+/*MENU WINDOW*/
+.menu-window {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  transform: translateY(60px);
+  transition: transform 0.5s;
+}
+.menu-window--show {
+  transform: translateY(0);
+}
+.menu-window-title {
+  font-size: 1.414em;
+  line-height: 1.5em;
+  color: #545454;
+}
+.menu-window-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 33px;
+  width: 33px;
+  border: none;
+  background-color: #949494;
+  color: white;
+  padding: 0;
+}
