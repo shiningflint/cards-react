@@ -37,10 +37,9 @@ class ContentOne extends React.Component {
     return(
       <div className="content2-wrap" id={this.props.theID}>
         <h2 className={"content2-title"+(this.state.show ? ' content2-title--show' : '' )}>
-          Potato driven design studio</h2>
+          {this.props.title}</h2>
         <p className={"content2-txt"+(this.state.show ? ' content2-txt--show' : '' )}>
-          We design easy-to-use interfaces and potatoes, which helps you to grow your own potatoes even further.
-        </p>
+          {this.props.txt}</p>
       </div>
     );
   }

@@ -45,9 +45,21 @@ class App extends React.Component {
         <Header/>
         <ContentTop />
         {this.state.grid && <GridNine />}
-        <ContentOne theID="content-two" onWindowScroll={true} />
-        <ContentOne theID="content-three" onWindowScroll={true} />
-        <ContentOne theID="content-four" onWindowScroll={true} />
+        <ContentOne
+          theID="content-two"
+          onWindowScroll={true}
+          title="We take your potatoes to the next level"
+          txt="We're not potato solvers, we're potato makers. Our motto is to create and solve potatoes that you've never heard about." />
+        <ContentOne
+          theID="content-three"
+          onWindowScroll={true}
+          title="Always a potato. Always potate."
+          txt="Potato named a leader in the new potato magic quadrant for potato services platforms, building on its potato-year legacy" />
+        <ContentOne
+          theID="content-four"
+          onWindowScroll={true}
+          title="Free yourself from past-era potatoes"
+          txt="Just about every potato has large, complex legacy mini-potatoes that don't meet growing demands for hunger, taste, or satisfaction." />
         <MenuBtn name={menuName} menu={this.state.menu} toggleMenu={this.toggleMenu}/>
         <MenuWindow name={menuName} menu={this.state.menu} toggleMenu={this.toggleMenu} />
       </div>
