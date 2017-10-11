@@ -36,7 +36,7 @@ class App extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({grid: true});
-    }, 1000);
+    }, 1400);
   }
 
   render() {
