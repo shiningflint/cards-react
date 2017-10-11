@@ -185,7 +185,8 @@ html {
 }
 
 /*CONTENTS*/
-.content1-wrap {
+.content1-wrap,
+.content2-wrap {
   padding: 16px;
   text-align: center;
   font-family: 'Open-sans', sans-serif;
@@ -222,6 +223,25 @@ html {
   transform: translateY(20px);
   animation: showup 0.5s 0.6s forwards;
 }
+
+.content2-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12vw;
+  font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.content2-txt {
+  font-size: 1em;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.content2-title--show,
+.content2-txt--show { animation: showup 0.5s forwards}
 
 .picture-grid {
   display: flex;

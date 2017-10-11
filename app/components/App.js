@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Header from './Header';
 import MenuBtn from './MenuBtn';
 import MenuWindow from './MenuWindow';
+import ContentTop from './ContentTop';
 import ContentOne from './ContentOne';
 import GridNine from './GridNine';
 
@@ -42,8 +43,11 @@ class App extends React.Component {
     return(
       <div className="app-holder">
         <Header/>
-        <ContentOne />
+        <ContentTop />
         {this.state.grid && <GridNine />}
+        <ContentOne theID="content-two" onWindowScroll={true} />
+        <ContentOne theID="content-three" onWindowScroll={true} />
+        <ContentOne theID="content-four" onWindowScroll={true} />
         <MenuBtn name={menuName} menu={this.state.menu} toggleMenu={this.toggleMenu}/>
         <MenuWindow name={menuName} menu={this.state.menu} toggleMenu={this.toggleMenu} />
       </div>
