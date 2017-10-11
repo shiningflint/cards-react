@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import throttle from 'lodash.throttle';
+import PropTypes from 'prop-types';
 
 class ContentOne extends React.Component {
   constructor(props) {
@@ -44,5 +45,12 @@ class ContentOne extends React.Component {
     );
   }
 }
+
+ContentOne.propTypes = {
+  theID: PropTypes.string.isRequired,
+  onWindowScroll: PropTypes.bool,
+  title: PropTypes.string,
+  txt: PropTypes.string,
+};
 
 module.exports = ContentOne;

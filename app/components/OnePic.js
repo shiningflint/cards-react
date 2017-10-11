@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 class OnePic extends React.Component {
   constructor(props) {
@@ -33,5 +34,9 @@ class OnePic extends React.Component {
     );
   }
 }
+
+OnePic.propTypes = {
+  imageURL: PropTypes.string
+};
 
 module.exports = OnePic;
