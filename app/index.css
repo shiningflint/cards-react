@@ -145,7 +145,7 @@ html {
   right: 50%;
   height: 30px;
   transform: translate(50%, 52px);
-  padding: 8px 16px 8px 32px;
+  padding: 2px 16px 2px 32px;
   background: #1e5799;
   background: linear-gradient(to right, #aa7d22 0%,#b29b60 100%);
   color: white;
@@ -195,10 +195,11 @@ html {
   background-color: white;
   text-align: center;
   transform: translateY(160px);
-  transition: transform 0.5s;
+  transition: transform 0.3s cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 .menu-window--show {
   transform: translateY(0);
+  transition: transform 0.3s cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 .menu-window-title {
   font-size: 1.414em;
