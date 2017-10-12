@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MenuNav from './MenuNav';
+import MenuCall from './MenuCall';
 
 class MenuWindow extends React.Component {
   constructor(props) {
@@ -19,10 +21,14 @@ class MenuWindow extends React.Component {
   render() {
     return(
       <div className={"menu-window"+(this.state.menu ? ' menu-window--show' : '')}>
-        <p className="menu-window-title">{this.props.name}</p>
-        <button
-          className="menu-window-close"
-          onClick={this.props.toggleMenu}>X</button>
+        <div>
+          <p className="menu-window-title">{this.props.name}</p>
+          <button
+            className="menu-window-close"
+            onClick={this.props.toggleMenu}>X</button>
+        </div>
+        <MenuNav/>
+        <MenuCall/>
       </div>
     );
   }

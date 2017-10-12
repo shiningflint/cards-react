@@ -32,7 +32,7 @@ class MenuBtn extends React.Component {
           className={"menu-btn"+(this.state.menu ? '' : ' menu-btn--show')}
           onClick={this.props.toggleMenu}>
           <span className="menu-btn-lines"></span>
-          {this.props.name}
+          <span className="menu-btn-txt">{this.props.name}</span>
         </button>
     </div>
     );
