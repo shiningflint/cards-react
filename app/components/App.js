@@ -44,7 +44,7 @@ class App extends React.Component {
       <div className="app-holder">
         <Header/>
         <ContentTop />
-        {/* this.state.grid && <GridNine /> */}
+        { this.state.grid && <GridNine /> }
         <ContentOne
           theID="content-two"
           onWindowScroll={true}
